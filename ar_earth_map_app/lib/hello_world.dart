@@ -1,9 +1,13 @@
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:vector_math/vector_math_64.dart' as vector;
 
 class HelloWorld extends StatefulWidget {
+  const HelloWorld({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _HelloWorldState createState() => _HelloWorldState();
 }
 
