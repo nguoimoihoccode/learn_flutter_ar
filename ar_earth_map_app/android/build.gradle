@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.0' // Hoặc phiên bản AGP phù hợp khác
+        // Nếu bạn sử dụng Kotlin, thêm dòng dưới đây với phiên bản Kotlin phù hợp
+        // classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:<kotlin_version>"
+    }
+}
+
 allprojects {
     repositories {
         google()

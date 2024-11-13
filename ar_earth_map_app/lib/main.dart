@@ -1,4 +1,4 @@
-import 'package:ar_earth_map_app/ar_earth_map_screen.dart';
+// import 'package:ar_earth_map_app/ar_earth_map_screen.dart';
 import 'package:ar_earth_map_app/hello_world.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
