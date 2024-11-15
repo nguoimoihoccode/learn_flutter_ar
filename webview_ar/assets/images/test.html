@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLB Model Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body { margin: 0; display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #f0f0f0; }
+        model-viewer { width: 100%; height: 100%; max-width: 800px; max-height: 600px; }
+    </style>
+</head>
+<body>
+    <!-- <model-viewer src="../models/2018_maserati_granturismo.glb" alt="A 3D model of a Maserati GranTurismo" auto-rotate camera-controls ar>
+    </model-viewer> -->
+    
+        <div style="height: 100%;">
+            <div id="idTest" style="width: 100%; height: 100%; border-right: 1px solid #ccc;">
+                <!-- Nội dung của idTest -->
+            </div>
+            <!-- <div id="idTest2" style="width: 50%; height: 100%;">
+              
+            </div> -->
+        </div>
+    
+    
+        <script type="module">
+           
+            // import { ViewCesium } from '../dist/dpu-gis-viewer.min.js';
+            import { ViewCesium } from 'https://unpkg.com/dpu-gis-viewer@1.0.15/dist/dpu-gis-viewer.min.js';
+            let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiMTBjMzY3Mi0zZGYzLTRiZjAtOGYxYS1kNDAzNTg5MGEzNTEiLCJpZCI6MjM1NDA1LCJpYXQiOjE3MjM5Nzc2OTV9.MyuJ80_a8hm5919QUzpeJHUGZQtrhCR_WdoXQK_31xY"
+    
+    
+        
+    
+    
+            let view = new ViewCesium()
+            view.initCesiumViewer("idTest", token)
+            
+    
+            view.activeBtnMapModel(false, "idTest")
+           
+        </script>
+
+</body>
+
+</html>
