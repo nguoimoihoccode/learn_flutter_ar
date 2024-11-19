@@ -215,7 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   debugPrint('Model failed to load: $error');
                 },
                 controller: controller,
-                src: 'assets/models/sceme.gltf', 
+                src: 'assets/images/business_man.glb', 
                 // src: 'assets/images/sheen_chair.glb', //3D model with different textures
                 // src: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb', // 3D model from URL
               ),

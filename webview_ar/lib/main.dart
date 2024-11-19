@@ -55,7 +55,7 @@ class _WebViewExampleState extends State<WebViewExample> {
   final htmlData = await rootBundle.loadString('assets/images/test.html');
   
   // Load GLB file as bytes
-  final glbData = await rootBundle.load('../models/2018_maserati_granturismo.glb');
+  final glbData = await rootBundle.load('assets/models/2018_maserati_granturismo.glb');
   final glbBase64 = base64Encode(glbData.buffer.asUint8List());
 
   // Embed GLB as Blob URL in HTML
