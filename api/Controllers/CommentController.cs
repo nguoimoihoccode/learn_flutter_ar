@@ -6,10 +6,12 @@ using api.Dtos.Comment;
 using api.Interfaces;
 using api.Mappers;
 using api.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
+    [Authorize]
     [Route("api/comment")]
     [ApiController]
     public class CommentController : ControllerBase
@@ -20,6 +22,7 @@ namespace api.Controllers
             _commentRepo = commentRepo;
             _stockRepo = stockRepo;
         }
+
         [HttpGet]
         public async Task<IActionResult> GetAll() 
         {
@@ -44,6 +47,7 @@ namespace api.Controllers
             }
             return Ok(comment.ToCommentDto());
         }
+
         [HttpPost("{stockId:int}")]
         public async Task<IActionResult> Create([FromRoute] int stockId, CreateCommentDto commentDto)
         {

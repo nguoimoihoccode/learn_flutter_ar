@@ -10,7 +10,17 @@ namespace api.Extensions
     {
         public static string GetUsername(this ClaimsPrincipal user)
         {
-            return user.Claims.SingleOrDefault(x => x.Type.Equals("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givename")).Value;
+            var usernameClaim = user.Claims.SingleOrDefault(x => x.Type == ClaimTypes.Name);
+
+            // Nếu không tìm thấy claim hoặc giá trị là null, ném ra ngoại lệ hoặc trả về một giá trị mặc định
+            if (usernameClaim == null || string.IsNullOrEmpty(usernameClaim.Value))
+            {
+                throw new InvalidOperationException("Username claim not found.");
+            }
+
+            return usernameClaim.Value;
         }
+
+
     }
 }
